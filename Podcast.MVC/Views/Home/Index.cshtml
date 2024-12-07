@@ -71,7 +71,7 @@
                     <div class="">
                         <div class="custom-block-icon-wrap">
                             <div class="section-overlay"></div>
-                            <a href="detail-page.html" class="custom-block-image-wrap">
+                                <a class="custom-block-image-wrap" asp-controller="episode" asp-action="details" asp-route-id="@item.Id" asp-route-title="@item.Title">
                                 <img src="@item.CoverUrl" class="custom-block-image img-fluid" alt="">
 
                                 <a asp-controller="home" asp-action="play" class="custom-block-icon">
@@ -101,7 +101,7 @@
                         </div>
 
                         <h5 class="mb-2">
-                            <a href="detail-page.html">
+                                <a asp-controller="episode" asp-action="details" asp-route-id="@item.Title#@item.Id">
                                 @item.Title
                             </a>
                         </h5>
